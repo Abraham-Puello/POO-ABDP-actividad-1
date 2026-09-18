@@ -1,0 +1,20 @@
+1. Atributos
+
+| Atributo | Tipo | Por qué |
+
+
+| nombre | String | Nombre de la persona |
+| cedula | String | Identificador único |
+| asignatura | String | Materia que dicta |
+| añosExperiencia | int | Dato de perfil profesional |
+| activo | boolean | Si está vinculado actualmente |
+
+2. Métodos
+- cambiarAsignatura(String nueva)`— reasignación académica
+- cumplirAñoExperiencia() — incrementa la experiencia
+- mostrarPerfil() — imprime la ficha del docente
+
+3. Objetos reales que podrían construirse
+- John Carlos Arrieta Arrieta, POO, 12 años de experiencia, activo
+- Marta Ceballos, Bases de Datos, 7 años, activa
+- Atilano Arrieta, Cálculo, 20 años, inactivo
