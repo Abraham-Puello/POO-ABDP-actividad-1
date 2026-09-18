@@ -1,0 +1,15 @@
+class Mascota {
+    String nombre;
+    String especie;
+
+    void mostrarMascota() {
+        System.out.println(nombre + " (" + especie + ")");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        // El programa compila y corre, pero no imprime NADA.
+
+    } 
+}
