@@ -1,0 +1,19 @@
+1. Atributos
+| Atributo | Tipo | Por qué |
+
+| nombre | String | Razón social |
+| propietario | String | Responsable del negocio |
+| caja | double | Dinero disponible en caja |
+| abierta | boolean | Si está atendiendo |
+| ventasDelDia | int | Contador de ventas |
+
+2. Métodos
+- abrir() / cerrar()
+- registrarVenta(double monto) — suma a caja y al contador
+- registrarGasto(double monto) — descuenta de caja si alcanza
+- cerrarCaja() — imprime el resumen del día y reinicia el contador
+
+3. Objetos reales que podrían construirse
+- Tienda La Esquina, doña Rosa, caja inicial $50000
+- Minimercado El Ahorro, Luis Padilla, caja inicial $200000
+- Papelería Getsemaní, Ana Cabrera, caja inicial $80000 

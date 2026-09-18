@@ -1,0 +1,20 @@
+1. Atributos
+| Atributo | Tipo | Por qué |
+
+| nombre | String | Nombre del club |
+| ciudad | String | ciudad |
+| puntos | int | Puntos en el campeonato |
+| partidosJugados | int | Total partidos |
+| golesAFavor / golesEnContra | int | Para la diferencia de gol |
+
+2. Métodos
+- ganar(int gf, int gc) — suma 3 puntos y actualiza goles
+- empatar(int gf, int gc) — suma 1 punto
+- perder(int gf, int gc) — suma 0 puntos
+- diferenciaDeGol() — goles a favor menos en contra
+- mostrarTabla() — imprime la fila del equipo
+
+3. Objetos reales que podrían construirse
+- Real Cartagena, Cartagena
+- Junior de Barranquilla, Barranquilla
+- Atlético Nacional, Medellín

@@ -1,0 +1,20 @@
+1. Atributos
+| Atributo | Tipo | Por qué |
+
+| nombre | String | Identifica el Hospital |
+| ciudad | String | Ubicación |
+| camasTotales | int | Capacidad instalada |
+| camasOcupadas | int | Ocupación actual |
+| urgenciasHabilitadas | boolean | Si recibe urgencias |
+
+2. Métodos
+- ingresarPaciente() — ocupa una cama si hay disponible
+- darDeAlta() — libera una cama
+- camasDisponibles() — retorna el cupo libre
+- habilitarUrgencias() / cerrarUrgencias()
+- mostrarEstado() — reporte de ocupación
+
+3. Objetos reales que podrían construirse
+- Hospital Universitario del Caribe, Cartagena, 350 camas
+- Nuevo Hospital Bocagrande, Cartagena, 180 camas
+- Hospital Serena del Mar, Cartagena, 120 camas
