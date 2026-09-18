@@ -1,0 +1,22 @@
+class Estudiante {
+    String nombre;
+    double promedio;
+
+    void compararCon() {
+        if (promedio > otro.promedio) {          // 'otro' no existe aqui
+            System.out.println(nombre + " tiene mejor promedio.");
+        }
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Estudiante e1 = new Estudiante();
+        e1.nombre = "Laura"; e1.promedio = 4.5;
+
+        Estudiante e2 = new Estudiante();
+        e2.nombre = "Luis"; e2.promedio = 3.9;
+
+        e1.compararCon();
+    }
+}
