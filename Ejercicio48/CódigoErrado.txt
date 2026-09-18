@@ -1,0 +1,23 @@
+class CuentaBancaria {
+    String titular;
+    double saldo;
+
+    void consignar(double valor) {
+        double saldo = saldo + valor;   // declara una variable local llamada saldo
+                                        // y la inicializa consigo misma
+    }
+
+    void mostrarCuenta() {
+        System.out.println(titular + " -> " + saldo);
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        CuentaBancaria c = new CuentaBancaria();
+        c.titular = "Pedro";
+        c.saldo = 100000;
+        c.consignar(50000);
+        c.mostrarCuenta();   // seguiria mostrando 100000
+    }
+}

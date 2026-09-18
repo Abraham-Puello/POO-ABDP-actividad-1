@@ -1,0 +1,15 @@
+class Estudiante {
+    String nombre;
+    String codigo;
+}
+
+    void mostrarInfo() { 
+        System.out.println(nombre);
+    }
+
+public class Main {
+    public static void main(String[] args) {
+        Estudiante e = new Estudiante();
+        e.mostrarInfo();
+    }
+}

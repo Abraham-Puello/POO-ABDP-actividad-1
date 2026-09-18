@@ -1,0 +1,14 @@
+class {
+    String marca;
+    int velocidadActual;
+
+    void mostrarEstado() {
+        System.out.println(marca + " " + velocidadActual);
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Vehiculo v = new Vehiculo();
+    }
+}
