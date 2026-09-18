@@ -1,0 +1,31 @@
+Clase 1: ActividadAcademica
+
+- Cuál fue la clase: ActividadAcademica
+- Cuáles fueron los objetos: el Taller de Clases y Objetos de POO, el quiz de
+  herencia, el modelo entidad-relación de Bases de Datos, el informe de Redes y el
+  ensayo de Ética.
+- Cuáles fueron sus atributos: titulo, asignatura, fechaEntrega,
+  entregada (boolean) y nota (double).
+- Cuáles fueron sus comportamientos:entregar(), calificar(double) y
+  mostrarFicha().
+
+Clase 2: Bus
+
+- Cuál fue la clase: Bus
+- Cuáles fueron los objetos: cinco buses con rutas y placas diferentes (T102,
+  T103, A101, X104, T105).
+- Cuáles fueron sus atributos: ruta, placa, capacidad, pasajeros y
+  enServicio.
+- Cuáles fueron sus comportamientos: iniciarRecorrido(),
+  terminarRecorrido(), subirPasajeros(int), bajarPasajeros(int) y
+  mostrarEstado().
+
+Clase 3: PedidoDomicilio
+
+- Cuál fue la clase:PedidoDomicilio
+- Cuáles fueron los objetos: cinco pedidos de clientes distintos, en distintos
+  estados del proceso.
+- Cuáles fueron sus atributos: cliente, direccion, subtotal, costoEnvio
+  y estado.
+- Cuáles fueron sus comportamientos: calcularTotal(), despachar(),
+  entregar(), cancelar() y mostrarPedido().
