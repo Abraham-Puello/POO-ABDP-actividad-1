@@ -1,0 +1,20 @@
+1. Atributos
+| Atributo | Tipo | Por qué |
+
+| nombre | String | Nombre de la biblioteca |
+| direccion | String | Ubicación física |
+| totalLibros | int | Cuántos libros tiene |
+| librosPrestados | int | Cuántos están fuera |
+| abierta | boolean | Si atiende en este momento |
+
+2. Métodos
+- `abrir() / cerrar() — controlan el horario de atención
+- `prestarLibro() — aumenta prestados si hay disponibles
+- `recibirDevolucion() — disminuye prestados
+- `librosDisponibles() — retorna total menos prestados
+- `mostrarEstado() — imprime la situación actual
+
+3. Objetos reales que podrían construirse
+- Biblioteca Central Universidad de Cartagena, Centro, 12000 libros
+- Biblioteca Bartolomé Calvo, Calle de la Inquisición, 8500 libros
+- Biblioteca de la sede Piedra de Bolívar, 4300 libros 
