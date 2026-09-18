@@ -1,0 +1,46 @@
+Forma 1: `new` + asignación posterior
+
+A favor: Mantiene la visibilidad del proceso. Se entiende que primero se crea el objeto 
+y después se le va asignando los datos uno a uno.
+Es muy útil para una persona que está aprendiendo lo que hace `new`.
+
+En contra: Es largo (cuatro líneas por objeto) y el objeto se queda ahí en un estado
+inconcluso con atributos `null` o `0` por un tiempo.
+Si algo se pasa por alto solo un error de tiempo de ejecución lo revelará.
+
+Forma 2: constructor con parámetros
+
+A favor: el objeto nace completo y coherente. El compilador obliga a pasar todos
+los datos, así que es imposible olvidar un atributo. Una línea por objeto.
+
+En contra: introduce dos ideas nuevas al mismo tiempo (el constructor como método
+especial y el uso de `this` para resolver la ambigüedad entre atributo y parámetro), y
+al leer la llamada no se sabe qué significa cada argumento sin ir a mirar la firma.
+
+Forma 3: constructor copia
+
+A favor: resuelve muy bien un caso concreto: partir de un objeto existente para
+crear uno parecido. Además sirve para enseñar la diferencia entre copiar un objeto y
+copiar una referencia.
+
+En contra: es la menos intuitiva de las tres. Exige entender antes qué es una
+referencia, y fuera de su caso de uso específico no aporta nada.
+
+
+
+     Argumentación: cuál es más clara para principiantes
+
+Para el primer contacto, la Forma 1 es el más instructivo desde una perspectiva educativa.
+Muestra los dos momentos que el programador novato tiene que comprender: la creación de 
+una instancia (la operación 'new' asigna memoria) y la inicialización del estado. 
+Con la Forma 2 esos dos momentos ocurren en la misma línea y quedan fundidos, 
+lo que alimenta justo la confusión que el taller quiere evitar, que la clase
+y el objeto parezcan lo mismo.
+
+Dicho eso, la Forma 1 es clara para aprender, no para programar. Apenas el
+estudiante entiende qué hace `new`, la Forma 2 es superior en todo lo demás:
+menos código, imposible olvidar datos y objetos que nunca existen a medias.
+
+Mi conclusión es que el orden importa más que la elección: empezar con la Forma 1 para
+ver el mecanismo, pasar a la Forma 2 apenas el mecanismo se entendió, y dejar la
+Forma 3 para cuando aparezca su caso de uso

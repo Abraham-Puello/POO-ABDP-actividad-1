@@ -1,0 +1,73 @@
+¿Qué es una clase?
+
+Una clase es la definición de un tipo: describe qué características tendrá una
+entidad y qué será capaz de hacer, sin comprometerse todavía con ningún caso
+particular. Es el molde de galletas, el plano del arquitecto, la receta escrita en la
+ficha. En la clase `Libro`, el atributo `titulo` no vale "Rayuela" ni vale nada: es la
+declaración de que existirá un espacio llamado `titulo` de tipo `String` en cada libro
+que se fabrique a partir de ese molde.
+
+Lo que más cuesta aceptar al principio es que la clase no se puede usar directamente.
+No se le puede preguntar su título, porque no es nadie en particular. Es la categoría,
+no el individuo. Los ejercicios de la Parte I lo dejaron claro de la forma más
+convincente posible: cuando se intenta invocar un método de instancia sobre la clase,
+el compilador responde con `non-static method cannot be referenced from a static
+context`. No es un capricho de Java, es que literalmente no hay a quién preguntarle.
+
+
+¿Qué es un objeto?
+
+Un objeto es una entidad concreta construida a partir de una clase. Tiene tres cosas
+que la clase no tiene: identidad, estado y la posibilidad de ejecutar comportamiento
+sobre sus propios datos.
+
+La identidad significa que dos objetos con exactamente los mismos valores siguen
+siendo dos objetos distintos, cada uno en su propia zona de memoria. El estado son los
+valores que guarda en sus atributos en un momento dado, y cambia con el tiempo: en el
+ejercicio 9 la misma mascota pasó de 4 a 5 y a 6 años sin dejar de ser la misma
+mascota. El comportamiento es lo que puede hacer con esos datos, y la clave está en el
+"sus": cuando se invoca `v1.acelerar()`, el método modifica la velocidad de `v1` y de
+nadie más. Esa independencia se comprobó en varios ejercicios: modificar un producto
+no tocó a los otros dos, y el vehículo de carreras pudo acelerar sin afectar al de
+mamá.
+
+¿Qué significa instanciar?
+
+Instanciar es el acto de producir una ocurrencia concreta de una clase. En Java ese
+acto lo realiza `new`: reserva la memoria del objeto, ejecuta el constructor y devuelve
+una referencia a la entidad recién construida.
+
+Conviene distinguirlo de "crear un objeto" aunque en la práctica cotidiana se usen
+como sinónimos. Instanciar pone el acento en el proceso y en el origen, en que hubo un
+molde que lo hizo posible; crear un objeto pone el acento en el resultado, en que ya
+existe algo concreto en el programa. Molde, fabricación y vela terminada: la clase, la
+instanciación y el objeto creado. Mantener esa distinción evita el error que
+diagnosticó el ejercicio 47, confundir la variable de referencia con el objeto.
+Declarar `Producto p;` no crea ningún producto; solo prepara una etiqueta que todavía
+no apunta a nada. Sin `new` no hay instancia, y sin instancia el programa falla con una
+`NullPointerException`.
+
+
+¿Por qué Java usa clases como base de la POO?
+
+Java es un lenguaje de tipado estático y basado en clases: todo el código vive dentro
+de una clase y todo objeto pertenece a un tipo conocido en tiempo de compilación. Esa
+decisión de diseño tiene consecuencias prácticas que se sintieron a lo largo del
+taller.
+
+Primero, la clase es la unidad que le permite al compilador verificar el programa antes
+de ejecutarlo. Como el tipo se conoce de antemano, muchos errores se detectan temprano,
+cuando corregirlos es barato: un método fuera de la clase, una clase sin nombre, una
+variable usada sin inicializar. Toda la Parte I fue eso.
+
+Segundo, la clase resuelve el problema que la programación procedural no podía
+resolver con elegancia. En el ejemplo procedural del inicio, los datos del libro
+estaban dispersos en variables sueltas y las funciones recibían todo por parámetro.
+Con tres atributos era manejable; con quince atributos, quinientos libros, usuarios,
+préstamos y multas, se volvía inmanejable. La clase agrupa en una sola unidad lo que
+una entidad es y lo que hace, y por eso escala.
+
+Tercero, y quizá lo más importante: la clase permite que el código se parezca al
+problema. Modelar una biblioteca como buses, pedidos, hospitales o estudiantes es más
+natural que modelarla como una colección de arreglos paralelos. Cuando el programa se
+lee como el dominio que representa, mantenerlo cuesta menos.
